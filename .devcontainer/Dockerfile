@@ -26,6 +26,9 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 # Grant sudo privileges to the node user
 RUN echo "node ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/node
 
+# Install global Node.js dependencies.
+RUN  sudo npm install --location=global aws-cdk-lib \
+  && sudo npm install --location=global aws-cdk
 ## optional, uncomment if neede:
 # Tell Git where to find the certificate
 #RUN git config --global http.sslCAInfo /usr/local/share/ca-certificates/your-root-ca.crt

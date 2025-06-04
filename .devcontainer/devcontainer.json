@@ -21,16 +21,16 @@
 		
 		// AWS CLI installation - allows you to run `aws` commands in terminal
 		// https://aws.amazon.com/cli/
-		"ghcr.io/devcontainers/features/aws-cli:1": {},
+		"ghcr.io/devcontainers/features/aws-cli:1": {}
 		
 		// AWS CDK (Cloud Development Kit) installation
 		// https://aws.amazon.com/cdk/
 		// TypeScript API reference: https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html
 		// https://github.com/danielbraun89/devcontainer-features/tree/main/src/aws-cdk
-		"ghcr.io/devcontainers-contrib/features/aws-cdk:2": {
+		//"ghcr.io/devcontainers-contrib/features/aws-cdk:2": {
 			// if you want to install a specific version of the AWS CDK
 			// "version": "2.186.0"
-		}
+		//}
 
 		// AWS SSO Util to simplify authentication with AWS SSO
 		// Uncomment if you prefer using static AWS IAM keys
@@ -71,7 +71,7 @@
 		// Makes your local AWS configuration available in the development environment
 		// Required if using static AWS IAM keys
 		// Useful if using AWS SSO and want to share AWS config across environments
-		//"source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws/,target=/home/vscode/.aws/,type=bind,consistency=cached"
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws/,target=/home/node/.aws/,type=bind,consistency=cached"
 	],
 
 	// Recommended settings for the development environment
